@@ -16,7 +16,8 @@ describe('Test onUserConfig', () => {
         hc = new HeaterController(RED, {
             group: 'someGroup',
             calendar: JSON.stringify(helper.calendar),
-            threshold: 0.5
+            upperHysteresis: 0.5,
+            lowerHysteresis: 0.5
         });
         sandbox.spy(HeaterController);
     })
