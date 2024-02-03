@@ -1,3 +1,5 @@
+### v4.0.1 (September 4, 2021)
+*  Re-introduced the ability to set Upper and Lower Hysteresis values;
 ### v3.0.0 (September 4, 2021)
 *  Structural changes;
 *  Migration to ECMA6
