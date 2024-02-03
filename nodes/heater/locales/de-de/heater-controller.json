@@ -24,7 +24,7 @@
          "kelvinUnit": "Kelvin",
          "upperHysteresis": "Obere Hysterese",
          "lowerHysteresis": "Geringere Hysterese",
-         "threshold": "Schwellwert",
+         "upThreshold": "Schwellwert",
          "calendar": "Kalender"
       },
       "placeholder": {
