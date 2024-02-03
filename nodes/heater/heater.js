@@ -217,9 +217,9 @@ class Heater extends UINode {
     }
 
     calculateStatus(targetValue) {
-        if (this.status.currentTemp >= (this.config.threshold + targetValue)) {
+        if (this.status.currentTemp >= (targetValue + this.config.upperHysteresis)) {
             this.status.currentHeaterStatus = 'off';
-        } else if (this.status.currentTemp <= (targetValue - this.config.threshold)) {
+        } else if (this.status.currentTemp <= (targetValue - this.config.lowerHysteresis)) {
             this.status.currentHeaterStatus = 'on';
         }
 
