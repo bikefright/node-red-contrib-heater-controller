@@ -24,7 +24,7 @@
             "kelvinUnit": "Kelvin",
             "upperHysteresis": "Histerezis Superior",
             "lowerHysteresis": "Histerezis Inferior",
-            "threshold": "Limita histereza",
+            "upThreshold": "Limita Histerezis",
             "calendar": "Calendar"
         },
         "placeholder": {
