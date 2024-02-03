@@ -29,7 +29,8 @@ describe("heater.spec.js", () => {
                 hc = new HeaterController(RED, {
                     group: 'someGroup',
                     calendar: JSON.stringify(helper.calendar),
-                    threshold: 0.5
+                    upperHysteresis: 0.5,
+                    lowerHysteresis: 0.5
                 });
             });
             var offSetData = [
@@ -151,7 +152,8 @@ describe("heater.spec.js", () => {
                 hc = new HeaterController(RED, {
                     group: 'someGroup',
                     calendar: JSON.stringify(helper.calendar),
-                    threshold: 0.5,
+                    upperHysteresis: 0.5,
+                    lowerHysteresis: 0.5
                     topic: 'heaterStatus'
                 });
                 hc.status.currentSchedule = {}; //not null
@@ -190,7 +192,8 @@ describe("heater.spec.js", () => {
                 hc = new HeaterController(RED, {
                     group: 'someGroup',
                     calendar: JSON.stringify(helper.calendar),
-                    threshold: 0.5,
+                    upperHysteresis: 0.5,
+                    lowerHysteresis: 0.5,
                     topic: 'heaterStatus'
                 });
             });
@@ -278,7 +281,8 @@ describe("heater.spec.js", () => {
                 hc = new heat(RED, {
                     group: 'someGroup',
                     calendar: JSON.stringify(helper.calendar),
-                    threshold: 0.5,
+                    upperHysteresis: 0.5,
+                    lowerHysteresis: 0.5,
                     topic: 'heaterStatus'
                 });
                 hc.status.currentSchedule = {}; //not null
@@ -307,7 +311,8 @@ describe("heater.spec.js", () => {
                     'title',
                     'topic',
                     'logLength',
-                    'threshold',
+                    'upperHysteresis',
+                    'lowerHysteresis',
                     'calendar',
                     'unit',
                     'displayMode',
