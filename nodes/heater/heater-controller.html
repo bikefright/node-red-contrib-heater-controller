@@ -165,7 +165,13 @@
                     return RED.validators.number(v)(v) && v > 0;
                 }
             },
-            threshold: {
+            upperHysteresis: {
+                value: 0.5,
+                validate: function (v) {
+                    return RED.validators.number(v)(v) && v >= -100 && v <= 100;
+                }
+            },
+            lowerHysteresis: {
                 value: 0.5,
                 validate: function (v) {
                     return RED.validators.number(v)(v) && v >= -100 && v <= 100;
@@ -331,7 +337,8 @@
             this.sliderMaxValue = Number.parseFloat($('#node-input-sliderMaxValue').val());
             this.sliderMinValue = Number.parseFloat($('#node-input-sliderMinValue').val());
             this.sliderStep = Number.parseFloat($('#node-input-sliderStep').val());
-            this.threshold = Number.parseFloat($('#node-input-threshold').val());
+            this.upperHysteresis = Number.parseFloat($('#node-input-upperHysteresis').val());
+            this.lowerHysteresis = Number.parseFloat($('#node-input-lowerHysteresis').val());
             $('#node-input-calendar').val(calendarVal);
         },
         oneditcancel: function () {
@@ -371,8 +378,12 @@
           <dd>Step value selectable from slider</dd>
       </dl>
       <dl class="message-properties">
-          <dt>Threshold<span class="property-type">float</span></dt>
-          <dd>Hysteresis/threshold limit. This value is added or subtracted from the target temperature to determinate the point of setting heater on or off</dd>
+          <dt>Upper Hysteresis<span class="property-type">float</span></dt>
+          <dd>Upper Hysteresis. This value is added (or subtracted from - if it's a negative number) to the target temperature to determinate the point of setting heater OFF</dd>
+      </dl>
+      <dl class="message-properties">
+          <dt>Lower Hysteresis<span class="property-type">float</span></dt>
+          <dd>Lower Hysteresis. This value is subtracted (or added to - if it's a negative number) from the target temperature to determinate the point of setting heater ON</dd>
       </dl>
       <dl class="message-properties">
           <dt>Calendar<span class="property-type">json</span></dt>
