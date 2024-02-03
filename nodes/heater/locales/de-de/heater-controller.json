@@ -22,7 +22,8 @@
          "celsiusUnit": "Celsius",
          "fahrenheitUnit": "Fahrenheit",
          "kelvinUnit": "Kelvin",
-         "hysteresis": "Hysterese",
+         "upperHysteresis": "Obere Hysterese",
+         "lowerHysteresis": "Geringere Hysterese",
          "threshold": "Schwellwert",
          "calendar": "Kalender"
       },
