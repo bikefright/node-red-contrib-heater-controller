@@ -22,7 +22,8 @@
             "celsiusUnit": "Celsius",
             "fahrenheitUnit": "Fahrenheit",
             "kelvinUnit": "Kelvin",
-            "hysteresis": "Hystereza",
+            "upperHysteresis": "Histerezis Superior",
+            "lowerHysteresis": "Histerezis Inferior",
             "threshold": "Limita histereza",
             "calendar": "Calendar"
         },
